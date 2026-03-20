@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.0.3
+
+### Summary
+Targeted hotfix to fix multilingual display issues in the Discord webhook.
+
+### Fixed
+- Fixed biome display in the Discord webhook when using French mode
+- Fixed Pokémon category translation in the Discord webhook
+- Fixed Discord webhook language mode handling for:
+  - `EN_ONLY`
+  - `FR_ONLY`
+  - `EN_AND_FR`
+  - `FR_AND_EN`
+
+### Improved
+- Added a dedicated biome name resolver for cleaner and easier-to-maintain biome handling
+- Improved consistency between Pokémon names, categories, and biome names in the Discord webhook
+- Improved overall reliability of the Discord webhook multilingual rendering
+
 ## 1.0.2
 
 ### Summary
