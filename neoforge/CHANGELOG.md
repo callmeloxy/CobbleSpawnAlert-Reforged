@@ -8,20 +8,20 @@ NeoForge 1.0.2 update bringing the main feature set of the Fabric 1.0.2 version 
 ### Added
 - Added expanded alert commands:
   - `/csar alerts`
-  - `/csar alerts status`
-  - `/csar alerts on`
-  - `/csar alerts off`
-  - `/csar alerts toggle`
+  - /csar alerts status
+  - /csar alerts on
+  - /csar alerts off
+  - /csar alerts toggle
 - Added category alert management:
-  - `/csar alerts category`
-  - `/csar alerts category status`
-  - `/csar alerts category reset`
-  - `/csar alerts category <type> on/off/toggle`
+  - /csar alerts category
+  - /csar alerts category status
+  - /csar alerts category reset
+  - /csar alerts category <type> on/off/toggle
 - Added variant alert management:
-  - `/csar alerts variant`
-  - `/csar alerts variant status`
-  - `/csar alerts variant reset`
-  - `/csar alerts variant <type> on/off/toggle`
+  - /csar alerts variant
+  - /csar alerts variant status
+  - /csar alerts variant reset
+  - /csar alerts variant <type> on/off/toggle
 - Added player reset options for global, category, and variant alert settings
 - Added persistent per-player alert preferences
 - Added sound commands:
