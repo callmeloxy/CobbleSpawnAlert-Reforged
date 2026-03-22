@@ -1,5 +1,61 @@
 # Changelog
 
+## 1.1.0
+
+### Summary
+This update introduces a full Pokémon info UI system for spawn alerts, with configurable display modes, 2D Pokémon images, and quick access actions.
+
+### Added
+- Added a custom Pokémon info UI for spawn alerts
+- Added three UI display modes:
+  - `LEGACY_ONLY`
+  - `UI_ONLY`
+  - `HYBRID`
+- Added clickable UI opening from spawn alerts depending on selected mode
+- Added 2D Pokémon image support in the info UI
+- Added UI actions:
+  - Dex
+  - Glow
+  - TP Player
+  - TP Pos
+- Added top-right close button to the info UI
+- Added configurable UI content options for:
+  - image
+  - category
+  - variant
+  - level
+  - biome
+  - nearest player
+  - coordinates
+  - IVs
+  - IV total
+  - EV yield
+  - nature
+  - ability
+  - gender
+- Added configurable UI action button options
+- Added UI management commands:
+  - `/csar ui`
+  - `/csar ui status`
+  - `/csar ui on`
+  - `/csar ui off`
+  - `/csar ui toggle`
+  - `/csar ui mode legacy_only`
+  - `/csar ui mode ui_only`
+  - `/csar ui mode hybrid`
+
+### Improved
+- Improved spawn alert readability by moving detailed Pokémon information into a dedicated UI
+- Improved overall user experience for viewing spawn details
+- Improved FR / EN rendering consistency in the Pokémon info UI
+- Improved image coverage for Pokémon shown in the UI
+- Improved handling of Shiny / Radiant / Alpha labels in the UI
+
+### Fixed
+- Fixed HYBRID mode so Shiny and Radiant symbols are preserved correctly in legacy-style alerts
+- Fixed several UI layout / interaction polish issues during the 1.1.0 implementation process
+- Fixed Pokémon image routing so base / shiny / radiant variants resolve correctly
+
 ## 1.0.3
 
 ### Summary
