@@ -54,6 +54,11 @@ This update adds a player-based capture indicator system, with per-player render
 ### Summary
 This update introduces a full Pokémon info UI system for spawn alerts, with configurable display modes, 2D Pokémon images, and quick access actions.
 
+### Fixed
+- Fixed HYBRID mode so Shiny and Radiant symbols are preserved correctly in legacy-style alerts
+- Fixed several UI layout / interaction polish issues during the 1.1.0 implementation process
+- Fixed Pokémon image routing so base / shiny / radiant variants resolve correctly
+
 ### Added
 - Added a custom Pokémon info UI for spawn alerts
 - Added three UI display modes:
@@ -100,11 +105,6 @@ This update introduces a full Pokémon info UI system for spawn alerts, with con
 - Improved image coverage for Pokémon shown in the UI
 - Improved handling of Shiny / Radiant / Alpha labels in the UI
 
-### Fixed
-- Fixed HYBRID mode so Shiny and Radiant symbols are preserved correctly in legacy-style alerts
-- Fixed several UI layout / interaction polish issues during the 1.1.0 implementation process
-- Fixed Pokémon image routing so base / shiny / radiant variants resolve correctly
-
 ## 1.0.3
 
 ### Summary
@@ -129,6 +129,13 @@ Targeted hotfix to fix multilingual display issues in the Discord webhook.
 ### Summary
 This update improves alert customization, adds alert previews and configurable anti-spam, and brings major polish to the Discord webhook integration.
 
+### Fixed
+- Fixed false spawn alerts triggered by already owned Pokémon being sent out by players
+- Fixed Shiny / Radiant alert logic depending on player settings
+- Fixed multiple command feedback messages
+- Fixed handling of some special Pokémon names in previews and Discord webhooks
+- Improved GG command behavior for plain text messages, slash commands, empty templates, per-player limits, and wrong-dimension checks
+
 ### Added
 - Added alert reset commands
 - Added per-player sound settings
@@ -138,13 +145,6 @@ This update improves alert customization, adds alert previews and configurable a
 - Added anti-spam config options:
   - `antiSpam.enabled`
   - `antiSpam.cooldownSeconds`
-
-### Fixed
-- Fixed false spawn alerts triggered by already owned Pokémon being sent out by players
-- Fixed Shiny / Radiant alert logic depending on player settings
-- Fixed multiple command feedback messages
-- Fixed handling of some special Pokémon names in previews and Discord webhooks
-- Improved GG command behavior for plain text messages, slash commands, empty templates, per-player limits, and wrong-dimension checks
 
 ### Improved
 - Improved per-player alert preferences
