@@ -1,5 +1,28 @@
 # Changelog
 
+## 1.2.0
+
+### Summary
+This update adds a player-based capture indicator system, with per-player rendering in the Pokémon info UI and in legacy / hybrid alerts.
+
+### Added
+- Added a player-based capture indicator system
+- Added a small Poké Ball icon in the custom Pokémon info UI when the viewed player has already captured the species
+- Added a green checkmark indicator in legacy / hybrid alert messages when the receiving player has already captured the species
+- Added hover text on the chat capture indicator for better readability
+
+### Changed
+- Capture state is now resolved individually for each player instead of relying on shared spawn UI data
+- Legacy alert messages are now built per player when capture state is needed
+- Radiant alert text now displays only the Radiant symbol instead of combining Shiny and Radiant symbols
+- Kept the 1.1.0 visual release decision for Radiant UI rendering:
+  - Radiant keeps its Radiant text identity
+  - Radiant continues to use shiny-image fallback in the UI
+
+### Notes
+- Capture detection currently checks species-level caught state only
+- Form-specific or variant-specific caught-state logic is not part of this version
+
 ## 1.1.0
 
 ### Summary
