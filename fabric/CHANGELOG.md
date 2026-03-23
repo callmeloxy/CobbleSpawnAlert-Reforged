@@ -1,5 +1,31 @@
 # Changelog
 
+## 1.2.1
+
+### Summary
+This update improves onboarding and overall mod readability with a `/csar help` command and a lightweight welcome message shown when a player joins.
+
+### Added
+- Added the `/csar help` command
+- Added a translatable help page for the main commands
+- Added alerts, sounds, UI, actions, and links sections to the help page
+- Added clickable links in the help page for Discord, GitHub, and BH
+- Added a small welcome message shown when a player joins
+- Added a clickable `/csar help` shortcut in the welcome message
+- Added clickable Discord, GitHub, and BH links in the welcome message
+
+### Improved
+- Improved command accessibility for new players
+- Improved onboarding with a short and useful welcome message
+- Improved overall readability with a centralized help entry point
+- Improved Discord link clarity with an explicit `Discord FR Only` hover text
+- Improved BisectHosting link presentation with a short and discreet `BH` format
+
+### Notes
+- The welcome message is designed as lightweight join-time information
+- Discord is labeled as `FR Only`
+- BH uses the public short link selected for in-game display
+
 ## 1.2.0
 
 ### Summary
