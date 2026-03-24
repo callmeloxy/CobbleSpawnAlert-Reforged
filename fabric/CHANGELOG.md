@@ -1,5 +1,55 @@
 # Changelog
 
+## 1.3.0
+
+### Summary
+This update adds full 3D Pokémon rendering support to the custom spawn info UI, while keeping the existing 2D sprite mode available as an alternative. It also introduces render mode commands, improves UI rendering behavior across different Pokémon shapes, and fixes false despawn messages after captures.
+
+### Fixed
+- Fixed false despawn messages appearing after a Pokémon was captured
+- Fixed capture cleanup flow so captured Pokémon are marked and removed correctly before optional follow-up logic
+- Fixed UI render mode switching so both 2D and 3D modes work correctly from config and commands
+- Fixed several 3D render edge cases across different Pokémon sizes and shapes
+- Fixed shiny and radiant 3D rendering validation issues during testing
+
+### Added
+- Added 3D Pokémon rendering support in the custom info UI
+- Added UI render modes:
+  - `SPRITE_2D`
+  - `MODEL_3D`
+- Added `renderMode` to the UI config
+- Added `/csar ui rendermode status`
+- Added `/csar ui rendermode sprite_2d`
+- Added `/csar ui rendermode model_3d`
+- Added help entry for UI render mode in `/csar help`
+- Added render profile support for different Pokémon shapes:
+  - `COMPACT`
+  - `STANDARD`
+  - `WIDE`
+  - `LONG`
+- Added separate generated config comment helper files:
+  - `CONFIG_COMMENTS_EN.txt`
+  - `CONFIG_COMMENTS_FR.txt`
+
+### Changed
+- Changed the custom Pokémon info UI so it can display either a 2D sprite or a 3D model
+- Changed UI rendering flow to support profile-based 3D framing instead of a single generic setup
+- Changed config generation to keep the main config focused on real settings while moving extra explanations into separate helper files
+- Changed despawn handling so capture-related unloads are processed more safely
+
+### Improved
+- Improved 3D framing and readability for different Pokémon body types
+- Improved rendering support for compact, standard, wide, and long Pokémon silhouettes
+- Improved static 3D portrait presentation in the UI with a clean transparent background
+- Improved render mode usability by exposing it through commands and config
+- Improved overall UI flexibility by keeping 2D and 3D available side by side
+- Improved capture and despawn interaction reliability
+
+### Notes
+- `MODEL_3D` is intended as the new advanced UI render option
+- `SPRITE_2D` remains available as a simpler alternative or fallback
+- This update focuses on UI rendering and stability, not on replacing the legacy alert system
+
 ## 1.2.1
 
 ### Summary
