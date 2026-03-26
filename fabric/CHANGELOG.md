@@ -1,5 +1,77 @@
 # Changelog
 
+## 1.4.0
+
+### Summary
+This update adds a unified in-game config hub for Main, Pokemon, and Server settings. It replaces the old separated config screens with a single consistent UI flow and integrates Teleport, Commands, and Discord Webhook settings directly into the same hub.
+
+### Fixed
+- Fixed multiple inconsistencies between the old config screens and the new unified hub flow
+- Fixed the server config save pipeline in the in-game UI
+- Fixed `Fallback Teleport` integration in the server snapshot and save flow
+- Fixed visual inconsistencies between Main, Pokemon, and Server config sections
+- Fixed and cleaned up FR / EN translation support for the active config UI
+- Fixed payload / snapshot alignment issues in the unified config system
+
+### Added
+- Added `/csar config`
+- Added a unified in-game config hub
+- Added left sidebar navigation with collapsible groups:
+  - `Main`
+  - `Pokemon`
+  - `Server`
+- Added Main sections directly inside the hub:
+  - `Alerts`
+  - `Display`
+  - `Sounds`
+  - `Pokemon Click`
+  - `GG`
+  - `Glow`
+  - `Anti-Spam`
+  - `Pokemon Info UI`
+- Added `Pokemon > Default` directly inside the hub
+- Added `Server > Teleport` directly inside the hub
+- Added `Server > Commands` directly inside the hub
+- Added `Server > Discord Webhook` directly inside the hub
+- Added internal groups for `Server > Teleport`:
+  - `General`
+  - `Coords Teleport`
+  - `Air Safety`
+  - `Anti-Spam`
+  - `Target / Loading`
+  - `Permissions`
+  - `Fallback Teleport`
+- Added full server snapshot support for:
+  - `Teleport`
+  - `Commands`
+  - `Discord Webhook`
+  - `Fallback Teleport`
+
+### Changed
+- Changed the in-game config flow to use one unified hub instead of multiple disconnected config screens
+- Changed `Main`, `Pokemon`, and `Server` config pages to share the same shell, navigation model, and footer actions
+- Changed the active config UI to rely on translatable text for FR / EN support
+- Changed the server config workflow so Teleport, Commands, and Discord Webhook are edited from the same UI system
+
+### Improved
+- Improved overall UI consistency across the in-game config system
+- Improved navigation with a single shared sidebar and section structure
+- Improved readability with consistent accordions and grouped sections
+- Improved config save / reset flow with clearer modified / saved state feedback
+- Improved maintainability by consolidating the main editable config surfaces into one system
+- Improved translation coverage for the unified config hub
+
+### Removed
+- Removed old legacy config screens that were no longer part of the main flow:
+  - `MainConfigUiScreen.java`
+  - `PokemonConfigUiScreen.java`
+  - `ServerTeleportConfigUiScreen.java`
+  - `ConfigPlaceholderScreen.java`
+
+### Notes
+- `Pokemon > Overrides` remains intentionally deferred to a future dedicated editor
+- This update focuses on unifying and stabilizing the in-game config experience rather than adding new gameplay features
+
 ## 1.3.0
 
 ### Summary
@@ -265,9 +337,9 @@ Initial release of CobbleSpawnAlert Reforged.
 - FR / EN localization support
 
 ### Improved
-- Clean translatable text system for in-game messages
-- Stable enum-based category handling
-- Cleaner internal handling for spawn and capture messages
+- Improved clean translatable text system for in-game messages
+- Improved stable enum-based category handling
+- Improved cleaner internal handling for spawn and capture messages
 
 ### Removed
 - Removed the legacy raw message template system
