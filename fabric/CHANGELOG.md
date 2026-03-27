@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.4.1
+
+### Summary
+This update is a small bug-fix / polish release focused on improving the readability of the `/csar sound` status output.
+
+### Fixed
+- Fixed the `/csar sound` status flow so it no longer feels split into multiple repeated menus
+
+### Changed
+- Changed `/csar sound`
+- Changed `/csar sound status`
+- Both commands now show the full sound status in a single structured menu with:
+  - Global sound status
+  - Category sound status
+  - Variant sound status
+
+### Improved
+- Improved readability of the sound status output
+- Improved consistency of the sound settings menu
+- Improved overall polish of the command feedback for sound settings
+
+### Notes
+- The detailed category and variant sound commands are still available
+- This update is focused on polish rather than new major features
+
 ## 1.4.0
 
 ### Summary
