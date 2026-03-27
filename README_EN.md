@@ -36,12 +36,12 @@ This repository does **not** contain the source code.
 
 If you would like to host a server for CobbleSpawnAlert Reforged while supporting the project, you can use this BisectHosting partner link:
 
-- BisectHosting: https://url-shortener.curseforge.com/2LxIY
+- [BisectHosting](https://url-shortener.curseforge.com/2LxIY)
 
 ## Downloads
 
-- Modrinth: https://modrinth.com/user/CallMeLoxy
-- CurseForge: https://www.curseforge.com/members/callmeloxy/projects
+- [Modrinth](https://modrinth.com/mod/cobblespawnalert-reforged)
+- [urseForge](https://www.curseforge.com/minecraft/mc-mods/cobblespawnalert-reforged)
 
 ## Development Status
 
