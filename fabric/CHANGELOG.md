@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.4.2
+
+### Summary
+This update is a small bug-fix / polish release focused on improving the in-game UI presentation and fixing `/csar help` on Fabric.
+
+### Fixed
+- Fixed `/csar help` on Fabric so the `Actions` section now properly includes:
+  - `/csar glow <spawnId>`
+  - `/csar tp <spawnId>`
+  - `/csar tpplayer <spawnId>`
+- Fixed the unified config hub background so it no longer applies the heavy dark fullscreen overlay
+
+### Changed
+- Changed the unified config hub rendering to keep the world more visible behind the UI
+- Changed the Fabric help output so it now matches the expected action commands more closely
+
+### Improved
+- Improved readability of the unified config UI by removing the overly dark background veil
+- Improved overall visual clarity of the in-game config hub
+- Improved consistency between Fabric and NeoForge for `/csar help`
+
+### Notes
+- This update is focused on polish and small bug fixes
+- No new major features were added in this release
+
 ## 1.4.1
 
 ### Summary
@@ -362,7 +387,7 @@ Initial release of CobbleSpawnAlert Reforged.
 - FR / EN localization support
 
 ### Improved
-- Improved clean translatable text system for in-game messages
+- Improved the clean translatable text system for in-game messages
 - Improved stable enum-based category handling
 - Improved cleaner internal handling for spawn and capture messages
 
