@@ -1,5 +1,54 @@
 # Changelog
 
+## 1.4.1
+
+### Summary
+This NeoForge 1.4.1 update fixes a server startup issue and restores a more complete and structured `/csar help` output in-game.
+
+### Fixed
+- Fixed a NeoForge server startup issue.
+- Fixed `/csar help` on NeoForge so it no longer shows only the reduced help index.
+- Fixed the in-game help output to restore the detailed sections for alerts, sounds, UI, actions, and links.
+
+### Improved
+- Improved the readability of `/csar help` on NeoForge.
+- Improved consistency between the NeoForge help output and the expected Fabric behavior.
+
+### Notes
+- This is a small NeoForge bugfix and parity update focused on server stability and help command behavior.
+
+## 1.4.0
+
+### Summary
+This update adds a unified in-game config hub for Main, Pokemon, and Server settings. It replaces the old separated config screens with a single consistent UI flow and integrates Teleport, Commands, and Discord Webhook settings into the same hub.
+
+### Fixed
+- Fixed multiple inconsistencies between the old config screens and the new unified hub flow.
+- Fixed the server config save pipeline in the in-game UI.
+- Fixed `Fallback Teleport` integration in the server snapshot and save flow.
+- Fixed FR / EN translation support issues in the active config UI.
+- Fixed payload / snapshot alignment issues in the unified config system.
+
+### Added
+- Added `/csar config`.
+- Added a unified in-game config hub.
+- Added left sidebar navigation with collapsible `Main`, `Pokemon`, and `Server` groups.
+- Added Main sections directly inside the hub: `Alerts`, `Display`, `Sounds`, `Pokemon Click`, `GG`, `Glow`, `Anti-Spam`, and `Pokemon Info UI`.
+- Added `Pokemon > Default`, `Server > Teleport`, `Server > Commands`, and `Server > Discord Webhook` inside the unified hub.
+
+### Changed
+- Changed the config workflow from multiple separated screens to one unified hub.
+- Changed navigation to use grouped sidebar sections instead of isolated config pages.
+- Changed the in-game config editing flow to keep Main, Pokemon, and Server settings inside one consistent UI structure.
+
+### Improved
+- Improved readability and consistency across the full in-game config UI.
+- Improved feature parity between config sections.
+- Improved the long-term maintainability of the config screen structure.
+
+### Notes
+- This update is focused on the new unified config hub and the 1.4.0 UI / config workflow.
+
 ## 1.0.2
 
 ### Summary
