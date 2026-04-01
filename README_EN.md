@@ -40,8 +40,8 @@ If you would like to host a server for CobbleSpawnAlert Reforged while supportin
 
 ## Downloads
 
-- [Modrinth](https://modrinth.com/mod/cobblespawnalert-reforged)
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblespawnalert-reforged)
+- [Modrinth](https://modrinth.com/mod/cobblespawnalert-reforged)
 
 ## Development Status
 
