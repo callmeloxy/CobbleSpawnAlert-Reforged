@@ -1,5 +1,64 @@
 # Changelog
 
+## 2.0.0
+
+### Summary
+CSAR now includes optional Cobblemon Mass Outbreaks support on Fabric through `cobblemonbreakouts`, with outbreak announcements aligned with the normal CSAR experience across chat, UI, and Discord.
+
+### Added
+- Added optional compatibility with Cobblemon Mass Outbreaks using the `PORTAL_SPAWN` trigger
+- Added in-game outbreak announcements with clickable interactions
+- Added outbreak support for the Pokémon page link
+- Added outbreak support for teleporting to the nearest player
+- Added outbreak support for teleporting to outbreak coordinates
+- Added outbreak support for the Pokémon info UI
+- Added outbreak support to the Discord webhook flow
+- Added outbreak registry tracking so outbreak UI and teleport interactions can resolve reliably after the initial alert
+- Added outbreak-specific internal click commands for UI and teleport actions
+- Added category support for outbreaks in chat, UI, and Discord
+- Added normalization for outbreak species IDs so category detection and Pokémon translation still work when the source does not include a namespace
+- Added a dedicated render profile fix for Tornadus / Boréas in the 3D UI
+
+### Changed
+- Changed outbreak alerts to follow CSAR-style mode behavior:
+  - `LEGACY_ONLY`
+  - `HYBRID`
+  - `UI_ONLY`
+- Changed outbreak chat formatting so it now uses `[Mass Outbreaks]` instead of the longer `[CobbleSpawnAlert Reforged]` prefix
+- Changed outbreak message interactions to match the intended UX:
+  - `HYBRID`: `[Mass Outbreaks]` opens the UI, Pokémon name opens the external Pokémon page
+  - `UI_ONLY`: Pokémon name opens the UI
+  - `LEGACY_ONLY`: no UI click behavior
+- Changed outbreak teleport interaction style so the nearest player name is clickable for player teleport and coordinates are clickable for coordinate teleport
+- Changed outbreak coordinates display format to `[x, y, z]`
+- Changed outbreak category display so categories appear inline in parentheses like normal spawn alerts
+- Changed outbreak Pokémon names to render in white like normal spawn alerts
+- Changed outbreak UI payload handling so outbreak screens only show data that is actually relevant
+
+### Improved
+- Improved outbreak webhook embeds so they now display cleaner and more consistent information:
+  - Pokémon name
+  - category when relevant
+  - nearest player
+  - position
+  - world
+  - biome
+- Improved outbreak UI consistency with the normal CSAR Pokémon info screen
+- Improved outbreak UI readability by removing fake spawn-only data such as IVs, EV yield, nature, ability, gender, and glow
+- Improved the Pokémon info screen separator line so it no longer crosses through the image area
+- Improved 3D UI presentation for Tornadus / Boréas with better vertical placement and scale
+
+### Removed
+- Removed the old outbreak-style oversized prefix from the final outbreak chat format
+- Removed outbreak UI interactions from `LEGACY_ONLY`
+- Removed glow from outbreak behavior by design
+
+### Notes
+- Outbreak support is optional and has no effect when Cobblemon Mass Outbreaks is not installed
+- Outbreaks intentionally do not support glow
+- Category support is intentionally kept for outbreaks because datapacks and custom server setups can expand outbreak content beyond the default configuration
+- The current outbreak block is considered a stable checkpoint
+
 ## 1.4.2
 
 ### Summary
@@ -387,7 +446,7 @@ Initial release of CobbleSpawnAlert Reforged.
 - FR / EN localization support
 
 ### Improved
-- Improved the clean translatable text system for in-game messages
+- Improved clean translatable text system for in-game messages
 - Improved stable enum-based category handling
 - Improved cleaner internal handling for spawn and capture messages
 
