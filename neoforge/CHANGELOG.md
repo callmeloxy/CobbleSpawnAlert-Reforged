@@ -1,5 +1,43 @@
 # Changelog
 
+## 2.0.0
+
+### Summary
+CSAR now includes optional Cobblemon Mass Outbreaks support on NeoForge, with outbreak announcements integrated into the normal CSAR flow across chat, UI, teleport actions, and Discord webhook output.
+
+### Fixed
+- Fixed the NeoForge outbreak compat hook so outbreak announcements now trigger correctly.
+- Fixed NeoForge outbreak UI opening from the alert flow.
+- Fixed outbreak teleport actions on NeoForge.
+- Fixed outbreak webhook flow on NeoForge.
+- Fixed multiple NeoForge translation mismatches so outbreak texts and related messages are aligned with the Fabric 2.0.0 wording.
+- Fixed `/csar reload` output on NeoForge so it matches the expected prefixed message style.
+
+### Added
+- Added optional compatibility with Cobblemon Mass Outbreaks on NeoForge.
+- Added automatic ingame announcements for new outbreaks.
+- Added outbreak support for the Pokémon info UI.
+- Added outbreak support for teleporting to the nearest player.
+- Added outbreak support for teleporting to outbreak coordinates.
+- Added outbreak support for Discord webhook announcements.
+- Added outbreak message support for biome, world, nearest player, and position display.
+- Added configurable `massOutbreaks` server settings for chat and Discord behavior.
+
+### Changed
+- Changed NeoForge outbreak handling to follow the normal CSAR announcement flow instead of using a separate disconnected system.
+- Changed outbreak announcements to respect the configured language display order in the same way as the main CSAR webhook flow.
+- Changed NeoForge text resources so key messages now match the intended Fabric 2.0.0 phrasing more closely.
+
+### Improved
+- Improved NeoForge parity with the Fabric 2.0.0 outbreak implementation.
+- Improved consistency between ingame alerts, UI interactions, and Discord webhook output for outbreaks.
+- Improved optional compatibility behavior so CSAR continues to work correctly even when Cobblemon Mass Outbreaks is not installed.
+
+### Notes
+- Cobblemon Mass Outbreaks support is optional and has no impact when the mod is not installed.
+- This update focuses on integrating outbreak announcements into the existing CSAR experience on NeoForge rather than creating a separate alert system.
+- Outbreak alerts support UI and teleport actions, but do not include glow behavior.
+
 ## 1.4.1
 
 ### Summary
@@ -118,30 +156,30 @@ NeoForge 1.0.2 update bringing the main feature set of the Fabric 1.0.2 version 
 First public NeoForge release of CobbleSpawnAlert Reforged.
 
 ### Added
-- First public NeoForge release of CobbleSpawnAlert Reforged
-- Spawn alerts for important Cobblemon Pokémon
-- Capture notifications
-- Clickable chat actions
-- Rare category support:
+- Added the first public NeoForge release of CobbleSpawnAlert Reforged.
+- Added spawn alerts for important Cobblemon Pokémon.
+- Added capture notifications.
+- Added clickable chat actions.
+- Added rare category support:
   - Legendary
   - Mythical
   - Ultra Beast
   - Paradox
   - Starter
-- Alpha, Shiny, and Radiant support
-- Teleport helper actions
-- Category-based glow actions
-- Discord webhook support
-- Configurable sounds and display options
-- FR / EN localization support
+- Added Alpha, Shiny, and Radiant support.
+- Added teleport helper actions.
+- Added category-based glow actions.
+- Added Discord webhook support.
+- Added configurable sounds and display options.
+- Added FR / EN localization support.
 
 ### Improved
-- Ported the mod to NeoForge
-- Commands adapted for NeoForge
-- Clean translatable text system for in-game messages
-- Stable enum-based category handling
-- Cleaner internal handling for spawn and capture messages
-- Tested with Cobblemon 1.6.1 and 1.7.3
+- Improved the port to NeoForge.
+- Improved command support for NeoForge.
+- Improved the translatable text system for in-game messages.
+- Improved enum-based category handling.
+- Improved internal handling for spawn and capture messages.
+- Improved compatibility testing with Cobblemon 1.6.1 and 1.7.3.
 
 ### Removed
-- Removed the legacy raw message template system
+- Removed the legacy raw message template system.
