@@ -1,19 +1,20 @@
-# AutoCraftTomAddon
+# CobbleSpawnAlert Reforged
 
-Tom's Storage addon with bulk craft buttons and a simple template system.
+Cobblemon spawn alert mod with configurable alerts, sounds, previews, and Discord webhook support.
 
 ## Overview
 
-AutoCraftTomAddon is a utility addon designed to improve Tom's Storage crafting, with bulk craft buttons, a simple template system, and a cleaner workflow for saving and reloading common recipes.
+CobbleSpawnAlert Reforged is a utility mod designed to make important Cobblemon spawns easier to notice and track, with configurable alerts, sound controls, preview tools, and Discord webhook integration.
 
 ## Features
 
-- Bulk craft buttons directly in the crafting terminal
-- Simple craft template system
-- Save and reload common recipes more easily
-- Local client-side template storage
+- Important Cobblemon spawn alerts
+- Configurable alert behavior
+- Configurable sound behavior
+- Alert preview system
+- Discord webhook integration
 - Support for Minecraft `1.21.1`
-- Development targeting `Fabric`
+- Development targeting `Fabric` and `NeoForge`
 
 ## Public Repository Purpose
 
@@ -33,14 +34,14 @@ This repository does **not** contain the source code.
 
 ## Server Hosting
 
-If you would like to host a server for AutoCraftTomAddon while supporting the project, you can use this BisectHosting partner link:
+If you would like to host a server for CobbleSpawnAlert Reforged while supporting the project, you can use this BisectHosting partner link:
 
 - [BisectHosting](https://url-shortener.curseforge.com/2LxIY)
 
 ## Downloads
 
-- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/auto-craft-toms-addon)
-- [Modrinth](https://modrinth.com/mod/auto-craft-toms-addon) Under Review
+- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblespawnalert-reforged)
+- [Modrinth](https://modrinth.com/mod/cobblespawnalert-reforged)
 
 ## Development Status
 
@@ -50,7 +51,7 @@ Additional documentation for installation, configuration, commands, and usage ma
 
 ## Links
 
-- [Issues](<GitHub Issues link>)
-- [Changelog : Fabric](https://github.com/callmeloxy/AutoCraftTomsAddon/blob/main/fabric/CHANGELOG.md)
-- [Changelog : NeoForge](https://github.com/callmeloxy/AutoCraftTomsAddon/blob/main/neoforge/CHANGELOG.md) Later
+- [Issues](https://github.com/callmeloxy/CobbleSpawnAlert-Reforged/issues)
+- [Changelog : Fabric](https://github.com/callmeloxy/CobbleSpawnAlert-Reforged/blob/main/fabric/CHANGELOG.md)
+- [Changelog : Neoforge](https://github.com/callmeloxy/CobbleSpawnAlert-Reforged/blob/main/neoforge/CHANGELOG.md)
 - [Discord](https://discord.gg/NsNGDKxrYr)
