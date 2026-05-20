@@ -1,5 +1,33 @@
 # Changelog
 
+## 2.3.0
+
+### Summary
+
+This small polish update improves Discord webhook Pokémon images by using shiny sprites when the Pokémon is shiny.
+
+### Added
+
+- Added shiny sprite support for Discord webhook Pokémon images
+- Added `{variant}` support in the Discord webhook image URL template
+
+### Changed
+
+- Changed Discord spawn webhooks so they now use the shiny Pokémon image when the spawned Pokémon is shiny
+- Changed Discord capture webhooks so they now use the shiny Pokémon image when the captured Pokémon is shiny
+- Changed non-shiny Pokémon handling so they continue to use the normal Pokémon image
+- Changed existing webhook image templates using `/normal/` so they remain compatible and are automatically adapted for shiny Pokémon when needed
+
+### Improved
+
+- Improved Discord webhook visual accuracy for shiny Pokémon
+- Improved consistency between the Pokémon variant shown in the webhook text and the Pokémon image displayed in the embed
+
+### Notes
+
+- Mass Outbreak webhook images continue to use the normal Pokémon image
+- Some special Pokémon forms may still depend on PokémonDB sprite URL availability
+
 ## 2.2.0
 
 ### Summary
