@@ -1,5 +1,51 @@
 # Changelog
 
+## 2.5.0
+
+### Summary
+
+This update fully reorganizes Discord webhook handling, adds Safari webhook support, improves Mass Outbreak detection, and introduces an option to prevent flooding from normal CSAR alerts during outbreaks.
+
+### Fixed
+
+- Fixed Mass Outbreak detection that could fail to trigger in-game alerts or Discord webhooks
+- Added a fallback scanner to detect active Mass Outbreaks even when the main compatibility event is not fired
+- Fixed behavior where Pokémon coming from a Mass Outbreak could trigger too many normal CSAR alerts
+- Fixed the missing translation for the option controlling normal alerts for outbreak Pokémon
+
+### Added
+
+- Added a separate `webhooks.json` config file
+- Added a dedicated webhook for Safari alerts
+- Added Safari webhook options in the server configuration UI
+- Added dedicated webhook URLs for spawns, captures, outbreaks, and Safari
+- Added fallback support to the default webhook when a dedicated webhook URL is empty
+- Added a configurable option to allow or block normal CSAR alerts for Pokémon coming from a Mass Outbreak
+- Added a flood warning in the UI for the normal outbreak alert option
+- Added a `LICENSE` file using All Rights Reserved
+
+### Changed
+
+- Changed Discord webhook handling so it is now separated from the main server config
+- Changed webhook organization to make configuration cleaner and easier to manage
+- Changed webhook migration flow so older webhook values can be moved into `webhooks.json`
+- Changed Mass Outbreak alert detection so it no longer depends only on the initial compatibility hook
+- Changed server behavior so admins can choose between the recommended anti-flood mode and a more permissive mode
+- Changed the mod license to All Rights Reserved
+
+### Improved
+
+- Improved readability and maintainability of the webhook configuration
+- Improved reliability of Mass Outbreak alerts and webhooks
+- Improved outbreak-related spam control for normal CSAR alerts
+- Improved server-side flexibility for Discord webhook routing
+
+### Notes
+
+- The mod license is now All Rights Reserved
+- By default, normal Pokémon from a Mass Outbreak do not trigger normal CSAR alerts in order to avoid spam
+- Important special alerts such as Shiny, Alpha, or Radiant can still be preserved according to the mod logic
+
 ## 2.4.1
 
 ### Summary
@@ -715,32 +761,71 @@ This update fixes false alerts from player-owned Pokémon, adds per-player alert
 
 ### Summary
 
-Initial release of CobbleSpawnAlert Reforged.
+Initial release of LoxyCraft.
 
 ### Added
 
-- Spawn alerts for important Cobblemon Pokémon
-- Capture notifications
-- Clickable chat actions
-- Rare category support:
-  - Legendary
-  - Mythical
-  - Ultra Beast
-  - Paradox
-  - Starter
-- Alpha, Shiny, and Radiant support
-- Teleport helper actions
-- Category-based glow actions
-- Discord webhook support
-- Configurable sounds and display options
-- FR / EN localization support
+- Added the LoxyCraft creative tab
+- Added Nether Star Block
+- Added Ender Pearl Block
+- Added Blaze Rod Block
+- Added Echo Shard Block
+- Added Nether Star Block Core
+- Added compressed blocks from x1 to x9 for:
+  - Iron
+  - Coal
+  - Copper
+  - Gold
+  - Diamond
+  - Emerald
+  - Quartz
+  - Netherite
+  - Lapis
+  - Redstone
+  - Glowstone
+  - Dirt
+  - Sand
+  - Gravel
+  - Grass
+  - Glass
+  - Stone
+  - Cobblestone
+  - Clay
+  - Granite
+  - Diorite
+  - Andesite
+- Added compression recipes for all compressed blocks
+- Added decompression recipes for all compressed blocks
+- Added loot tables for all custom blocks
+- Added English and French translations
+- Added proper tool tags for compressed blocks
+- Added conditional Cobblemon recipes that only load when Cobblemon is installed
+
+### Changed
+
+- Changed the project identity from CraftBlock to LoxyCraft
+- Changed the mod namespace to `loxycraft`
+- Changed the Java package to `com.loxy.loxycraft`
+- Changed recipes to the Minecraft 1.21.1 format using `data/<namespace>/recipe/` and `result.id`
+- Changed loot tables to the Minecraft 1.21.1 path `data/<namespace>/loot_table/blocks/`
+- Changed tool tags to the Minecraft 1.21.1 path `data/minecraft/tags/block/`
 
 ### Improved
 
-- Improved clean translatable text system for in-game messages
-- Improved stable enum-based category handling
-- Improved cleaner internal handling for spawn and capture messages
+- Improved compressed block textures by baking layered overlays directly into PNG textures for Fabric compatibility
+- Improved Grass compressed blocks with separate top, side, and bottom textures
+- Improved Glass compressed blocks with transparent rendering
+- Improved Glowstone compressed blocks with light emission
+- Improved mining behavior:
+  - Dirt, Grass, Gravel, Sand, and Clay can be mined by hand and are faster with a shovel
+  - Coal requires a pickaxe
+  - Iron, Lapis, Copper, Stone, Cobblestone, Quartz, Granite, Diorite, and Andesite require at least a stone pickaxe
+  - Gold, Redstone, Diamond, and Emerald require at least an iron pickaxe
+  - Netherite requires at least a diamond pickaxe
+- Improved durability balance by using `strength(1.5f)` for compressed blocks
 
-### Removed
+### Notes
 
-- Removed the legacy raw message template system
+- This version focuses on establishing the personal LoxyCraft base
+- LoxyCraft is currently kept as a personal utility mod
+- The mod now provides a strong foundation for future custom components and quality-of-life additions
