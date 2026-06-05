@@ -1,5 +1,41 @@
 # Changelog
 
+## 2.5.1
+
+### Summary
+
+This update mainly improves the CSAR configuration UI to make it cleaner, more readable, and more consistent between `/csar config` and `/csar server`.
+
+### Fixed
+
+- Fixed a stray vertical line visible in the left menu of the config UI
+- Fixed the same visual issue in the personal configuration UI
+- Fixed alignment in `Teleport > Permissions`
+- Fixed the duplicate `Enabled` / `Disabled` visual state in the specific Pokémon configuration
+- Fixed several UI texts that were too long or poorly aligned
+
+### Changed
+
+- Changed the UI option layout to use a more consistent structure:
+  - option name on the left
+  - state or value on the right
+- Changed Discord webhook controls in the server UI so the `URL` and `Test` buttons are now more compact
+- Changed some section ordering to make navigation more coherent
+- Changed the outbreak warning text to be clearer:
+  - `May spam chat and Discord alerts during a Mass Outbreak.`
+
+### Improved
+
+- Improved readability of the `Enabled`, `Disabled`, `Configured`, and `Not Configured` states
+- Improved readability of the Discord webhook section in the server UI
+- Improved readability of the Outbreaks section
+- Improved overall visual consistency between personal and server configuration screens
+
+### Notes
+
+- This update does not change alert logic, webhook logic, or Mass Outbreak behavior
+- This release is mainly a UI polish update
+
 ## 2.5.0
 
 ### Summary
@@ -761,71 +797,32 @@ This update fixes false alerts from player-owned Pokémon, adds per-player alert
 
 ### Summary
 
-Initial release of LoxyCraft.
+Initial release of CobbleSpawnAlert Reforged.
 
 ### Added
 
-- Added the LoxyCraft creative tab
-- Added Nether Star Block
-- Added Ender Pearl Block
-- Added Blaze Rod Block
-- Added Echo Shard Block
-- Added Nether Star Block Core
-- Added compressed blocks from x1 to x9 for:
-  - Iron
-  - Coal
-  - Copper
-  - Gold
-  - Diamond
-  - Emerald
-  - Quartz
-  - Netherite
-  - Lapis
-  - Redstone
-  - Glowstone
-  - Dirt
-  - Sand
-  - Gravel
-  - Grass
-  - Glass
-  - Stone
-  - Cobblestone
-  - Clay
-  - Granite
-  - Diorite
-  - Andesite
-- Added compression recipes for all compressed blocks
-- Added decompression recipes for all compressed blocks
-- Added loot tables for all custom blocks
-- Added English and French translations
-- Added proper tool tags for compressed blocks
-- Added conditional Cobblemon recipes that only load when Cobblemon is installed
-
-### Changed
-
-- Changed the project identity from CraftBlock to LoxyCraft
-- Changed the mod namespace to `loxycraft`
-- Changed the Java package to `com.loxy.loxycraft`
-- Changed recipes to the Minecraft 1.21.1 format using `data/<namespace>/recipe/` and `result.id`
-- Changed loot tables to the Minecraft 1.21.1 path `data/<namespace>/loot_table/blocks/`
-- Changed tool tags to the Minecraft 1.21.1 path `data/minecraft/tags/block/`
+- Spawn alerts for important Cobblemon Pokémon
+- Capture notifications
+- Clickable chat actions
+- Rare category support:
+  - Legendary
+  - Mythical
+  - Ultra Beast
+  - Paradox
+  - Starter
+- Alpha, Shiny, and Radiant support
+- Teleport helper actions
+- Category-based glow actions
+- Discord webhook support
+- Configurable sounds and display options
+- FR / EN localization support
 
 ### Improved
 
-- Improved compressed block textures by baking layered overlays directly into PNG textures for Fabric compatibility
-- Improved Grass compressed blocks with separate top, side, and bottom textures
-- Improved Glass compressed blocks with transparent rendering
-- Improved Glowstone compressed blocks with light emission
-- Improved mining behavior:
-  - Dirt, Grass, Gravel, Sand, and Clay can be mined by hand and are faster with a shovel
-  - Coal requires a pickaxe
-  - Iron, Lapis, Copper, Stone, Cobblestone, Quartz, Granite, Diorite, and Andesite require at least a stone pickaxe
-  - Gold, Redstone, Diamond, and Emerald require at least an iron pickaxe
-  - Netherite requires at least a diamond pickaxe
-- Improved durability balance by using `strength(1.5f)` for compressed blocks
+- Improved clean translatable text system for in-game messages
+- Improved stable enum-based category handling
+- Improved cleaner internal handling for spawn and capture messages
 
-### Notes
+### Removed
 
-- This version focuses on establishing the personal LoxyCraft base
-- LoxyCraft is currently kept as a personal utility mod
-- The mod now provides a strong foundation for future custom components and quality-of-life additions
+- Removed the legacy raw message template system
