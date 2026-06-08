@@ -1,5 +1,48 @@
 # Changelog
 
+## 2.5.2
+
+### Summary
+
+This update improves CSAR sound handling with more precise server-side and player-side sound settings.
+
+### Added
+
+- Added volume and pitch settings for normal alerts
+- Added per-category volume and pitch settings for:
+  - Legendary
+  - Mythical
+  - Ultra Beast
+  - Paradox
+  - Starter
+- Added per-variant volume and pitch settings for:
+  - Alpha
+  - Shiny
+  - Radiant
+- Added personal volume and pitch settings in `/csar config`
+
+### Changed
+
+- Changed sound editing so it is now more consistent between `/csar server` and `/csar config`
+- Changed value editing for volume and pitch:
+  - left-click now increases the value
+  - right-click now decreases the value
+- Changed the Sounds section structure to keep a clearer organization:
+  - General
+  - Categories
+  - Variants
+
+### Improved
+
+- Improved sound customization precision for both server admins and players
+- Improved consistency of the sound configuration workflow
+- Improved readability of the Sounds section
+
+### Notes
+
+- Server settings define the base values
+- Player settings allow each player to adjust volume and pitch to their own preferences
+
 ## 2.5.1
 
 ### Summary
