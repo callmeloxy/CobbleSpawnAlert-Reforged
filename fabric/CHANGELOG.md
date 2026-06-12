@@ -1,5 +1,44 @@
 # Changelog
 
+## 2.6.0
+
+### Summary
+
+This update adds compatibility with Cobblemon Raid Dens, including dedicated raid alerts, raid Pokémon capture announcements, and a dedicated Discord webhook.
+
+### Added
+
+- Added optional compatibility with Cobblemon Raid Dens
+- Added an in-game alert when a Raid Den appears
+- Added Raid Den alert information for:
+  - Pokémon
+  - level
+  - raid difficulty
+  - nearest player
+  - coordinates
+  - biome
+- Added a dedicated Discord webhook for Raid Den alerts
+- Added a message when a player receives a Pokémon after a raid
+- Added an option to enable or disable raid victory announcements
+- Added an option to hide false despawn messages linked to raid bosses
+- Added a dedicated sound for Raid Den spawn alerts
+- Added volume and pitch settings for the Raid Den spawn sound
+- Added Raid Dens options in `/csar server`
+- Added Raid Dens player preferences in `/csar config`
+
+### Improved
+
+- Improved compatibility handling so Raid Dens options only appear when Cobblemon Raid Dens is installed
+- Improved Raid Den spawn messages so they stay compact and readable on a single line
+- Improved the Raid Den webhook so it focuses on the important raid information
+- Improved Raid Den sound behavior so the sound only plays when the Raid Den appears, not on capture or victory
+
+### Notes
+
+- This compatibility is optional and has no effect if Cobblemon Raid Dens is not installed
+- Raid Dens webhooks remain configured on the server side
+- `/csar config` preferences allow each player to choose whether they want to receive Raid Den announcements
+
 ## 2.5.2
 
 ### Summary
