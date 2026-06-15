@@ -1,5 +1,40 @@
 # Changelog
 
+## 2.6.1
+
+### Summary
+
+This update improves the Raid Dens and CobbleSafari integrations by making their alerts clickable and compatible with the CSAR UI system.
+
+### Added
+
+- Added clickable Raid Dens alerts
+- Added CSAR UI support for Raid Dens alerts
+- Added clickable CobbleSafari alerts
+- Added CSAR UI support for CobbleSafari alerts
+
+### Improved
+
+- Improved Raid Dens alerts so they can now open a dedicated CSAR UI view
+- Improved Raid Den coordinates so they are now clickable and can be used for position teleportation
+- Improved the nearest player entry in Raid Den alerts so it is now clickable and can be used for player teleportation
+- Improved the Raid Dens UI so it now displays useful raid information, including:
+  - Pokémon
+  - level
+  - difficulty
+  - biome
+  - nearest player
+  - coordinates
+- Improved CobbleSafari alerts so they can now open a dedicated CSAR UI view
+- Improved CobbleSafari coordinates so they are now clickable and can be used for position teleportation
+- Improved the nearest player entry in CobbleSafari alerts so it is now clickable and can be used for player teleportation
+- Improved the CobbleSafari UI so it now displays useful portal information, including:
+  - destination
+  - world
+  - nearest player
+  - coordinates
+- Improved Raid Dens and CobbleSafari behavior so they now follow the same teleport anti-spam logic as classic CSAR alerts
+
 ## 2.6.0
 
 ### Summary
