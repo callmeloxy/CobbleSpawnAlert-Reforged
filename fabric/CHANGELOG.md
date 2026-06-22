@@ -1,5 +1,82 @@
 # Changelog
 
+## 2.7.0
+
+### Summary
+
+This update improves CSAR integrations by making Raid Dens and CobbleSafari alerts clickable, adding UI support for both systems, improving Discord webhook behavior, and exposing several missing configuration options in the in-game config UI.
+
+### Fixed
+
+- Fixed Raid Dens UI and teleport actions expiring too quickly while the raid was still active
+- Fixed Raid Dens compatibility being forced back to enabled when saving the server config UI
+- Fixed missing UI exposure for the world-load chat message setting
+- Fixed missing UI exposure for Mass Outbreak Discord webhook display settings
+- Fixed CobbleSafari click targets so the alert tag and destination open the UI while informational text remains non-clickable
+- Fixed personal Pokémon alert preferences incorrectly being able to trigger global Discord webhooks
+
+### Added
+
+- Added clickable Raid Dens alerts
+- Added CSAR UI support for Raid Dens alerts
+- Added clickable CobbleSafari alerts
+- Added CSAR UI support for CobbleSafari alerts
+- Added UI access from Raid Dens alert components
+- Added UI access from CobbleSafari alert components
+- Added `main.alert.sameDimensionOnly` to the in-game config UI as an alert reception option
+- Added `main.messages.showWorldLoadChatMessage` to the in-game config UI
+- Added `server.raidDens.enabled` to the in-game config UI
+- Added Mass Outbreak Discord webhook display options to the in-game config UI
+- Added configurable Mass Outbreak Discord webhook fields for:
+  - position
+  - world
+  - biome
+  - nearest player
+
+### Changed
+
+- Changed Raid Dens alerts so they now behave more consistently with classic CSAR alerts
+- Changed CobbleSafari alerts so they now behave more consistently with classic CSAR alerts
+- Changed Raid Dens and CobbleSafari teleport behavior so they now use the same anti-spam logic as classic CSAR alerts
+- Changed Pokémon alerts triggered only by a player's personal `/csar config` preferences so they no longer send global Discord webhooks
+- Changed global server alerts from `/csar server` and classic category alerts so they continue to send Discord webhooks when enabled
+- Changed `main.sameDimensionOnly` so it is now stored in the alert section as `main.alert.sameDimensionOnly`
+- Changed config migration so existing `main.sameDimensionOnly` values are moved automatically to the new alert config location
+
+### Improved
+
+- Improved Raid Den coordinates so they are now clickable and can be used for position teleportation
+- Improved the nearest player entry in Raid Den alerts so it is now clickable and can be used for player teleportation
+- Improved the Raid Dens UI so it now displays useful raid information, including:
+  - Pokémon
+  - level
+  - difficulty
+  - biome
+  - nearest player
+  - coordinates
+- Improved the Raid Dens UI so it now supports `TP Pos` and `TP Player` actions
+- Improved Raid Dens registry duration so UI and teleport actions remain valid for the expected raid lifetime
+- Improved CobbleSafari destination names so they are now clickable and can open the CSAR UI
+- Improved CobbleSafari `[Safari]` alert tags so they are now clickable and can open the CSAR UI
+- Improved CobbleSafari coordinates so they are now clickable and can be used for position teleportation
+- Improved the nearest player entry in CobbleSafari alerts so it is now clickable and can be used for player teleportation
+- Improved the CobbleSafari UI so it now displays useful portal information, including:
+  - destination
+  - world
+  - nearest player
+  - coordinates
+- Improved the CobbleSafari UI so it now supports `TP Pos` and `TP Player` actions
+- Improved CobbleSafari registry duration to prevent UI and teleport actions from expiring too quickly
+- Improved separation between alert reception settings and teleport restriction settings in the config UI
+- Improved consistency between classic Pokémon alerts, Mass Outbreak alerts, Raid Dens alerts, and CobbleSafari alerts
+
+### Notes
+
+- Raid Dens and CobbleSafari keep the same teleport anti-spam behavior as classic CSAR alerts
+- A single alert cannot be used to chain multiple teleport actions
+- Glow actions are not added to Raid Dens or CobbleSafari because they are not suitable for these alert types
+- CobbleSafari informational text is intentionally not clickable to keep alert interactions clear
+
 ## 2.6.1
 
 ### Summary
