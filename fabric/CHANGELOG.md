@@ -1,5 +1,71 @@
 # Changelog
 
+## 2.8.0
+
+### Summary
+
+This update adds a new CSAR alert history UI, configurable history limits, and a new compatibility filter to ignore artificial Pokémon spawns from systems such as Cobblemon Trial Spawners and Cobblemon Battle Towers.
+
+### Fixed
+
+* Fixed missing config UI grouping for the history settings
+* Fixed a build issue caused by the new `Server > History` section not being handled in the config sidebar switch
+* Fixed missing translation keys in the config UI
+* Fixed raw translation keys appearing for some alert and Mass Outbreak Discord config options
+* Fixed the non-natural spawn filter option being placed in a confusing config section
+* Fixed artificial Battle Tower Pokémon being able to trigger false classic CSAR spawn alerts when the filter is enabled
+* Fixed artificial Trial Spawner Pokémon being able to trigger false classic CSAR spawn alerts when the filter is enabled
+
+### Added
+
+* Added a new alert history UI accessible with `/csar history`
+* Added alert history categories for Pokémon, Raid, Safari, Raid Dens, and Mass Outbreak alerts
+* Added history entries showing useful alert information such as Pokémon, category, level, nearest player, coordinates, world, biome, age, and current status
+* Added active or expired status display for history entries
+* Added action buttons in the history UI for still-usable alerts
+* Added configurable history size with `server.history.maxEntries`
+* Added a new `Server > History` section in the config UI
+* Added a new option to ignore artificial Pokémon spawns
+* Added `main.alert.ignoreNonNaturalSpawns` to the config
+* Added a new `Compatibility > Non-natural Spawns` section in the config UI
+* Added compatibility filtering for Cobblemon Trial Spawners
+* Added compatibility filtering for Cobblemon Battle Tower spawns
+* Added support for muting classic CSAR spawn alerts from artificial spawn sources
+
+### Changed
+
+* Changed classic Pokémon alerts so they can now be stored in the alert history
+* Changed Raid Dens alerts so they can now be stored in the alert history
+* Changed CobbleSafari alerts so they can now be stored in the alert history
+* Changed Mass Outbreak alerts so they can now be stored in the alert history
+* Changed alert history so it keeps the most recent entries based on the configured maximum amount
+* Changed the artificial spawn filter so it is disabled by default to preserve existing behavior
+* Changed the artificial spawn filter so it only affects classic Pokémon spawn alerts
+* Changed Raid Dens, CobbleSafari, and Mass Outbreak alerts so they are not affected by the artificial spawn filter
+* Changed non-natural spawn settings so they are now grouped under the Compatibility section instead of being mixed with general alert settings
+
+### Improved
+
+* Improved alert review by allowing players to reopen recent alerts from a dedicated history UI
+* Improved usability for recent alerts by keeping UI, TP Player, and TP Pos actions available while the alert is still valid
+* Improved clarity by hiding action buttons for expired history entries
+* Improved server control by allowing administrators to configure how many alerts are kept in history
+* Improved protection against false classic spawn alerts caused by artificial Pokémon sources
+* Improved compatibility with Cobblemon Trials Edition
+* Improved compatibility with Cobblemon Battle Tower
+* Improved config UI organization for compatibility-related options
+* Improved French and English translations for the new history and compatibility settings
+* Improved the description text for the non-natural spawn filter to better fit inside the config UI
+
+### Notes
+
+* Alert history is stored in memory and is not persisted after a server restart
+* The default alert history limit is 100 entries
+* The configurable history limit supports values from 1 to 500 entries
+* Expired history entries remain visible for reference but no longer provide active action buttons
+* The non-natural spawn filter must be enabled manually in the config UI
+* The non-natural spawn filter was tested with Cobblemon Battle Tower and Cobblemon Trial Spawner sources
+
 ## 2.7.1
 
 ### Summary
