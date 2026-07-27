@@ -1,5 +1,63 @@
 # Changelog
 
+## 2.8.1
+
+### Summary
+
+This polish update adds in-game alert color customization, allowing server administrators to define default CSAR chat alert colors and players to optionally use their own local color preferences.
+
+### Fixed
+
+* Fixed compatibility with existing alert message building after adding configurable colors
+* Fixed an issue where alert color support could break older message builder calls
+* Fixed the custom color section being too visually dense by making it collapsible
+
+### Added
+
+* Added in-game chat alert color customization
+* Added server-side default alert colors in `/csar server`
+* Added player-side alert color customization in `/csar config`
+* Added an option for players to choose between server alert colors and personal custom colors
+* Added customizable colors for:
+
+  * alert tags
+  * Pokémon names
+  * categories
+  * nearest players
+  * coordinates
+  * secondary text
+  * separators
+* Added bold options for alert tags and Pokémon names
+* Added a server-side reset button to restore the default CSAR alert colors
+* Added a player-side reset button to return to server alert colors
+* Added a collapsible custom colors section in the player config UI
+
+### Changed
+
+* Changed classic Pokémon spawn alerts so they now use the configured in-game alert colors
+* Changed player custom color handling so personal colors are only applied when the player disables the server color option
+* Changed server alert colors so they are used as the default display for all players
+* Changed the player config UI so personal custom colors remain visible and editable before they are enabled
+* Changed the default CSAR alert colors to improve chat readability
+
+### Improved
+
+* Improved visibility of important alert elements in chat
+* Improved readability of Pokémon names in classic spawn alerts
+* Improved the visual hierarchy of CSAR chat alerts
+* Improved player control over personal alert readability
+* Improved server control over the default alert appearance
+* Improved the player config UI by separating custom color settings into a collapsible section
+* Improved consistency between server-defined colors and player-local overrides
+
+### Notes
+
+* Alert color customization only affects in-game chat alerts
+* Discord webhook colors and embeds are not affected by this update
+* Players use server colors by default
+* Players can switch to personal colors from `/csar config`
+* Resetting player colors makes the player use server colors again
+
 ## 2.8.0
 
 ### Summary
@@ -551,7 +609,7 @@ This update adds optional CobbleSafari portal alerts, expands Mass Outbreaks con
 * Improved personal configuration UI structure
 * Improved personal Pokémon-specific UI with autocomplete, presets, custom sound, and custom message support
 * Improved config safety by keeping server rules and player preferences separated
-* Improved optional compatibility handling so CSAR remains usable without optional compat mods installed
+* Improved optional compatibility handling so CSAR remains usable without optional compatibility mods installed
 
 ### Notes
 
@@ -698,7 +756,7 @@ CSAR now includes optional Cobblemon Mass Outbreaks support on Fabric through `c
 
 ### Summary
 
-This update is a small bug-fix / polish release focused on improving the in-game UI presentation and fixing `/csar help` on Fabric.
+This update is a small bug-fix and polish release focused on improving the in-game UI presentation and fixing `/csar help` on Fabric.
 
 ### Fixed
 
@@ -729,7 +787,7 @@ This update is a small bug-fix / polish release focused on improving the in-game
 
 ### Summary
 
-This update is a small bug-fix / polish release focused on improving the readability of the `/csar sound` status output.
+This update is a small bug-fix and polish release focused on improving the readability of the `/csar sound` status output.
 
 ### Fixed
 
@@ -769,7 +827,7 @@ This update adds a unified in-game config hub for Main, Pokemon, and Server sett
 * Fixed `Fallback Teleport` integration in the server snapshot and save flow
 * Fixed visual inconsistencies between Main, Pokemon, and Server config sections
 * Fixed and cleaned up FR / EN translation support for the active config UI
-* Fixed payload / snapshot alignment issues in the unified config system
+* Fixed payload and snapshot alignment issues in the unified config system
 
 ### Added
 
@@ -822,7 +880,7 @@ This update adds a unified in-game config hub for Main, Pokemon, and Server sett
 * Improved overall UI consistency across the in-game config system
 * Improved navigation with a single shared sidebar and section structure
 * Improved readability with consistent accordions and grouped sections
-* Improved config save / reset flow with clearer modified / saved state feedback
+* Improved config save and reset flow with clearer modified and saved state feedback
 * Improved maintainability by consolidating the main editable config surfaces into one system
 * Improved translation coverage for the unified config hub
 
@@ -852,7 +910,7 @@ This update adds full 3D Pokémon rendering support to the custom spawn info UI,
 * Fixed capture cleanup flow so captured Pokémon are marked and removed correctly before optional follow-up logic
 * Fixed UI render mode switching so both 2D and 3D modes work correctly from config and commands
 * Fixed several 3D render edge cases across different Pokémon sizes and shapes
-* Fixed shiny and radiant 3D rendering validation issues during testing
+* Fixed Shiny and Radiant 3D rendering validation issues during testing
 
 ### Added
 
@@ -933,24 +991,24 @@ This update improves onboarding and overall mod readability with a `/csar help` 
 
 ### Summary
 
-This update adds a player-based capture indicator system, with per-player rendering in the Pokémon info UI and in legacy / hybrid alerts.
+This update adds a player-based capture indicator system, with per-player rendering in the Pokémon info UI and in legacy or hybrid alerts.
 
 ### Added
 
 * Added a player-based capture indicator system
 * Added a small Poké Ball icon in the custom Pokémon info UI when the viewed player has already captured the species
-* Added a green checkmark indicator in legacy / hybrid alert messages when the receiving player has already captured the species
+* Added a green checkmark indicator in legacy or hybrid alert messages when the receiving player has already captured the species
 * Added hover text on the chat capture indicator for better readability
 
 ### Changed
 
-* Capture state is now resolved individually for each player instead of relying on shared spawn UI data
-* Legacy alert messages are now built per player when capture state is needed
-* Radiant alert text now displays only the Radiant symbol instead of combining Shiny and Radiant symbols
+* Changed capture state handling so it is now resolved individually for each player instead of relying on shared spawn UI data
+* Changed legacy alert messages so they are now built per player when capture state is needed
+* Changed Radiant alert text so it now displays only the Radiant symbol instead of combining Shiny and Radiant symbols
 * Kept the 1.1.0 visual release decision for Radiant UI rendering:
 
   * Radiant keeps its Radiant text identity
-  * Radiant continues to use shiny-image fallback in the UI
+  * Radiant continues to use Shiny image fallback in the UI
 
 ### Notes
 
@@ -965,9 +1023,9 @@ This update introduces a full Pokémon info UI system for spawn alerts, with con
 
 ### Fixed
 
-* Fixed HYBRID mode so Shiny and Radiant symbols are preserved correctly in legacy-style alerts
-* Fixed several UI layout / interaction polish issues during the 1.1.0 implementation process
-* Fixed Pokémon image routing so base / shiny / radiant variants resolve correctly
+* Fixed `HYBRID` mode so Shiny and Radiant symbols are preserved correctly in legacy-style alerts
+* Fixed several UI layout and interaction polish issues during the 1.1.0 implementation process
+* Fixed Pokémon image routing so base, Shiny, and Radiant variants resolve correctly
 
 ### Added
 
@@ -1019,7 +1077,7 @@ This update introduces a full Pokémon info UI system for spawn alerts, with con
 * Improved overall user experience for viewing spawn details
 * Improved FR / EN rendering consistency in the Pokémon info UI
 * Improved image coverage for Pokémon shown in the UI
-* Improved handling of Shiny / Radiant / Alpha labels in the UI
+* Improved handling of Shiny, Radiant, and Alpha labels in the UI
 
 ## 1.0.3
 
@@ -1040,7 +1098,7 @@ Targeted hotfix to fix multilingual display issues in the Discord webhook.
 
 ### Improved
 
-* Added a dedicated biome name resolver for cleaner and easier-to-maintain biome handling
+* Improved biome name handling with a dedicated resolver for cleaner and easier maintenance
 * Improved consistency between Pokémon names, categories, and biome names in the Discord webhook
 * Improved overall reliability of the Discord webhook multilingual rendering
 
@@ -1053,16 +1111,16 @@ This update improves alert customization, adds alert previews and configurable a
 ### Fixed
 
 * Fixed false spawn alerts triggered by already owned Pokémon being sent out by players
-* Fixed Shiny / Radiant alert logic depending on player settings
+* Fixed Shiny and Radiant alert logic depending on player settings
 * Fixed multiple command feedback messages
 * Fixed handling of some special Pokémon names in previews and Discord webhooks
-* Improved GG command behavior for plain text messages, slash commands, empty templates, per-player limits, and wrong-dimension checks
+* Fixed GG command behavior for plain text messages, slash commands, empty templates, per-player limits, and wrong-dimension checks
 
 ### Added
 
 * Added alert reset commands
 * Added per-player sound settings
-* Added sound commands and per-category / per-variant sound controls
+* Added sound commands and per-category or per-variant sound controls
 * Added an alert preview system
 * Added configurable anti-spam for spawn alerts
 * Added anti-spam config options:
@@ -1087,7 +1145,7 @@ This update improves alert customization, adds alert previews and configurable a
 
 ### Summary
 
-This update fixes false alerts from player-owned Pokémon, adds per-player alert toggles, and introduces a clickable `(Shiny)` label for shiny Pokémon without a rare category.
+This update fixes false alerts from player-owned Pokémon, adds per-player alert toggles, and introduces a clickable `(Shiny)` label for Shiny Pokémon without a rare category.
 
 ### Fixed
 
@@ -1109,7 +1167,7 @@ This update fixes false alerts from player-owned Pokémon, adds per-player alert
   * Radiant
 * Added alert status command
 * Added persistent player alert preferences
-* Added clickable `(Shiny)` label for shiny Pokémon without a rare category
+* Added clickable `(Shiny)` label for Shiny Pokémon without a rare category
 * Added clearer alert command structure with:
 
   * `/csar alerts category ...`
@@ -1121,7 +1179,7 @@ This update fixes false alerts from player-owned Pokémon, adds per-player alert
 * Improved alert filtering logic for multi-tag spawns
 * Improved player customization of alert visibility
 * Improved overall reliability of spawn detection
-* Radiant now properly takes priority over Shiny for alert filtering
+* Improved alert priority so Radiant now properly takes priority over Shiny for alert filtering
 
 ## 1.0.0
 
