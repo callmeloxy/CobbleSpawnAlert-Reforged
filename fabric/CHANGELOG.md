@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.0.0
+
+### Summary
+
+Same features as 2.9.1, with a fix for the Pokémon info screen and a new shared base for Fabric and NeoForge.
+
+### Fixed
+
+- Fixed the Pokémon info screen being blurred by the menu background
+
+### Changed
+
+- Changed the project structure so Fabric and NeoForge share the same code and receive the same features and fixes at the same time
+
+### Improved
+
+- Improved Mass Outbreaks compatibility: the fallback scanner now stays active even if the portal event cannot be hooked
+
+### Notes
+
+- Existing configuration files in `config/CobbleSpawnAlertReforged/` are kept
+- The jar is now named `CobbleSpawnAlertReforged-fabric-1.21.1-<version>.jar`: remove the old CSAR jar from your `mods` folder before updating
+
 ## 2.9.1
 
 ### Summary
