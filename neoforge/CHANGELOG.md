@@ -1,5 +1,33 @@
 # Changelog
 
+## 3.0.0
+
+### Summary
+
+The NeoForge version catches up with Fabric. Both versions now share the same code and the same features.
+
+### Fixed
+
+- Fixed the Pokémon info screen being blurred by the menu background
+- Fixed Alpha alerts not triggering with Cobblemon 1.8+ native Alpha Pokémon on NeoForge (already fixed on Fabric in 2.9.1)
+
+### Added
+
+- Added every feature released since 2.1.0 to the NeoForge version, including Alert Profiles, Raid Dens and CobbleSafari alerts, JourneyMap waypoints, Alert History, custom alert messages, custom sounds and personal player settings
+
+### Changed
+
+- Changed the project structure so Fabric and NeoForge share the same code and receive the same features and fixes at the same time
+
+### Improved
+
+- Improved Mass Outbreaks compatibility: the fallback scanner now stays active even if the portal event cannot be hooked
+
+### Notes
+
+- Existing configuration files in `config/CobbleSpawnAlertReforged/` are kept
+- The jar is now named `CobbleSpawnAlertReforged-<loader>-1.21.1-<version>.jar`: remove the old CSAR jar from your `mods` folder before updating
+
 ## 2.1.0
 
 ### Summary
