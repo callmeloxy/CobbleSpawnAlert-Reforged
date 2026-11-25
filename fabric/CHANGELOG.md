@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.9.1
+
+### Summary
+
+Compatibility fix for Cobblemon 1.8, restoring Alpha alerts.
+
+### Fixed
+
+- Fixed Alpha alerts not triggering with Cobblemon 1.8+ native Alpha Pokémon
+
+### Notes
+
+- The legacy standalone Alphas mod is still supported
+- Tested target: Minecraft 1.21.1, Fabric, Cobblemon 1.8.4
+
 ## 2.9.0
 
 ### Summary
